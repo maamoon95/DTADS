@@ -39,16 +39,15 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
 		'dbs.options' => array(
 			'db' => array(
 				'driver'   => 'pdo_mysql',
-				'dbname'   => 'DATABASE_NAME',
-				'host'     => '127.0.0.1',
-				'user'     => 'DATABASE_USER',
-				'password' => 'DATABASE_PASS',
-				'charset'  => 'utf8',
+				'dbname'   => 'bbvmzqsvugb9ru5e0bmb',
+				'host'     => 'bbvmzqsvugb9ru5e0bmb-mysql.services.clever-cloud.com',
+				'user'     => 'utjdjpy6tleci66s',
+				'password' => 'npxExOmMRvtl8w1LhRA5',
 			),
 		)
 ));
 
-$app['asset_path'] = '/resources';
+$app['asset_path'] = 'https://app-945f870e-bbdf-4fbd-8402-e20236ecb4d2.cleverapps.io/resources';
 $app['debug'] = true;
 	// array of REGEX column name to display for foreigner key insted of ID
 	// default used :'name','title','e?mail','username'
