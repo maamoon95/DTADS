@@ -1,0 +1,81 @@
+{% extends 'ag_base/backend.html.twig' %}
+
+{% block container %}
+
+    <div class="wrapper row-offcanvas row-offcanvas-left">
+
+        {% include 'menu.html.twig' with {'option': 'Session_create'} %}
+
+        <!-- Right side column. Contains the navbar and content of the page -->
+        <aside class="right-side">                
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                    Create Session
+                </h1>
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+
+                {% include 'ag_alerts.html.twig' %}
+
+                <div class="row">
+                    <div class="col-md-6">
+
+                        {{ form_start(form, {'method': 'POST'}) }}
+                            {{ form_errors(form) }}
+
+                            <div class="box box-info">
+                                <div class="box-header">
+                                    <h3 class="box-title"></h3>
+                                </div><!-- /.box-header -->
+                                <div class="box-body">
+
+									<div class='form-group'>
+									    {{ form_label(form.sid) }}
+									    {{ form_widget(form.sid, { attr: { 'class': 'form-control' }}) }}
+									</div>
+
+									<div class='form-group'>
+									    {{ form_label(form.expires) }}
+									    {{ form_widget(form.expires, { attr: { 'class': 'form-control' }}) }}
+									</div>
+
+									<div class='form-group'>
+									    {{ form_label(form.data) }}
+									    {{ form_widget(form.data, { attr: { 'class': 'form-control textarea', 'style': 'width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;' }}) }}
+									</div>
+
+									<div class='form-group'>
+									    {{ form_label(form.createdAt) }}
+									    {{ form_widget(form.createdAt, { attr: { 'class': 'form-control' }}) }}
+									</div>
+
+									<div class='form-group'>
+									    {{ form_label(form.updatedAt) }}
+									    {{ form_widget(form.updatedAt, { attr: { 'class': 'form-control' }}) }}
+									</div>
+
+                                                  
+
+                                </div><!-- /.box-body -->
+
+                                {{ form_rest(form) }}
+
+                                <div class="box-footer">
+                                    <button type="submit" class="btn btn-primary">Create</button>
+                                </div>
+
+                            </div><!-- /.box -->
+                        {{ form_end(form) }}
+
+
+                    </div>
+                </div>
+
+            </section><!-- /.content -->
+        </aside><!-- /.right-side -->
+    </div><!-- ./wrapper -->
+
+{% endblock %}
